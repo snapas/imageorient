@@ -60,13 +60,13 @@ func DecodeConfig(r io.Reader) (image.Config, string, error) {
 func getOrientation(r io.Reader) (int, io.Reader) {
 	buf := new(bytes.Buffer)
 	tr := io.TeeReader(io.LimitReader(r, maxBufLen), buf)
-	orientation := readOrientation(tr)
+	orientation := ReadOrientation(tr)
 	return orientation, io.MultiReader(buf, r)
 }
 
 // readOrientation reads the EXIF orientation tag from the given image.
 // It returns 0 if the orientation tag is not found or invalid.
-func readOrientation(r io.Reader) int {
+func ReadOrientation(r io.Reader) int {
 	const (
 		markerSOI      = 0xffd8
 		markerAPP1     = 0xffe1
