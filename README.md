@@ -1,6 +1,6 @@
 # imageorient
 
-[![GoDoc](https://godoc.org/github.com/disintegration/imageorient?status.svg)](https://godoc.org/github.com/disintegration/imageorient)
+[![GoDoc](https://godoc.org/github.com/snapas/imageorient?status.svg)](https://godoc.org/github.com/snapas/imageorient)
 
 Package `imageorient` provides image decoding functions similar to standard library's
 `image.Decode` and `image.DecodeConfig` with the addition that they also handle the
@@ -12,11 +12,11 @@ See also: http://www.daveperrett.com/articles/2012/07/28/exif-orientation-handli
 
 ## Install / Update
 
-    go get -u github.com/disintegration/imageorient
+    go get -u github.com/snapas/imageorient
 
 ## Documentation
 
-http://godoc.org/github.com/disintegration/imageorient
+https://godoc.org/github.com/snapas/imageorient
 
 ## Usage example
 
@@ -28,7 +28,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/disintegration/imageorient"
+	"github.com/snapas/imageorient"
 )
 
 func main() {
